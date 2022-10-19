@@ -1,0 +1,3264 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/17/2022 10:46:24 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAKSHMI"
+  DTS:CreatorName="LAKSHMI\laksh"
+  DTS:DTSID="{409A1F57-FB75-4144-BE84-58263289E315}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{4E16EBA1-3BB2-4690-B6E7-1B6D6FDB6C6E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager -2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EDF0A00F-84BD-4AB7-A183-EBD48A248C0D}"
+      DTS:ObjectName="Flat File Connection Manager -2">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::secondfile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{ADC576F0-60B3-4AE6-85EE-99DAE5193DB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex"
+              DTS:DTSID="{7D241CB4-C2B0-42ED-93E5-E6BBCCD53152}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age group (years) at date of injury"
+              DTS:DTSID="{DD84D3B5-77E6-468A-B497-304411B41561}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Geographic region where injury occurred"
+              DTS:DTSID="{959A1DD0-7B85-48B1-A988-08281B4C6A30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Employment status"
+              DTS:DTSID="{3C77A992-C1E4-4D34-AFFA-9125A132F78C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Occupation"
+              DTS:DTSID="{15E1C81E-6C6A-443E-9E15-38B66247DA03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Injury illness disease group"
+              DTS:DTSID="{3467D854-554D-4F4B-9C73-F787F4FB5B1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type of injury illness disease"
+              DTS:DTSID="{7C47EB7F-DA35-4A5F-A101-8AB95DCEB35F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Industry"
+              DTS:DTSID="{D8813471-473C-4517-8FB3-1BD1FABF5DE2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Industry subgroup"
+              DTS:DTSID="{641F10A6-097F-42F4-83E2-35904E4C38AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{33A13370-6B4E-414A-B5FA-D7343F8BAD47}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Measure"
+              DTS:DTSID="{F69472F4-1CF3-4909-BC47-BC5D74F5334C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{6EDA3448-1861-4B2E-9E20-D8206B0A36BB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager source]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EC37769B-A316-44AB-80D6-E9563A88FE48}"
+      DTS:ObjectName="Flat File Connection Manager source">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::firstfile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direction"
+              DTS:DTSID="{51CD5E87-14F5-4AFC-AD6E-5FE5A193CA3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{C7FC970B-3484-4F71-A3AA-34CECCAE9CA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{A691FDC3-26E9-42FB-8E00-D0DDF6B2B7EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weekday"
+              DTS:DTSID="{35C8E280-4BD0-4E56-9616-F5E8F2FCD6D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{979231CF-4B41-4677-935A-6AF74BAC9933}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Commodity"
+              DTS:DTSID="{74DC271F-8B95-4E46-AE1D-7BDED4CEFED0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Transport_Mode"
+              DTS:DTSID="{A5009890-6329-455C-B887-8E71F4613ED5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Measure"
+              DTS:DTSID="{0EEE7821-C9E8-45AB-B0B9-574C0CB41A07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{46BE4978-5896-4B94-A3B9-52C059044BB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cumulative"
+              DTS:DTSID="{D2C339D0-A16F-4FF4-8268-D4F8A6886FA1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager source-1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E0160201-B529-4BEB-A13C-5BB480EBC5B3}"
+      DTS:ObjectName="Flat File Connection Manager source-1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::secondfile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{E6CA81FC-4797-421F-B1B6-841A2059C16B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex"
+              DTS:DTSID="{1B17776E-37F1-4763-B9FA-7A2B9373CA93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age group (years) at date of injury"
+              DTS:DTSID="{AA029706-F935-4FC2-9D58-E3AE3AD669CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Geographic region where injury occurred"
+              DTS:DTSID="{3C4C7707-53A8-45F3-9241-317B25DAA05C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Employment status"
+              DTS:DTSID="{BEBFD5F7-F9A1-4916-AB58-FFA3A2C6CCBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Occupation"
+              DTS:DTSID="{86F02648-E5B1-412A-BC7D-C11CFBBD5632}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type of injury illness disease"
+              DTS:DTSID="{48C29C85-8145-49AA-8E42-429A823F3ADC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Industry"
+              DTS:DTSID="{101B1DC5-C596-4CA3-BAF3-5F95947687E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Industry subgroup"
+              DTS:DTSID="{8657F555-8D91-4274-BC85-7C0C1BCE2680}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{88462854-369E-4460-84E2-F16FD9D5BC8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Measure"
+              DTS:DTSID="{9D1A3815-967F-4887-B4F9-3B15DA75C6C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{5362DB07-7C83-43CF-B2D7-C2D86CCB6D58}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI.AdventureWorksDW2019]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{30E70976-11FA-4908-9FF9-E433133F2871}"
+      DTS:ObjectName="LAKSHMI.AdventureWorksDW2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI;Initial Catalog=AdventureWorksDW2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{30E70976-11FA-4908-9FF9-E433133F2871}LAKSHMI.AdventureWorksDW2019;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAKSHMI.tempdb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6410F4DD-BB4E-4A48-9DAA-5B5D60E25E7F}"
+      DTS:ObjectName="LAKSHMI.tempdb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAKSHMI;Initial Catalog=tempdb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{6410F4DD-BB4E-4A48-9DAA-5B5D60E25E7F}LAKSHMI.tempdb;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lakshmidbserver.database.windows.net.AdventureWorksDW2019.lakshmi]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3DBE3636-D03A-4162-80D4-21F60698240A}"
+      DTS:ObjectName="lakshmidbserver.database.windows.net.AdventureWorksDW2019.lakshmi">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lakshmidbserver.database.windows.net;User ID=lakshmi;Initial Catalog=AdventureWorksDW2019;Provider=SQLNCLI11.1;Application Name=SSIS-Package-{3DBE3636-D03A-4162-80D4-21F60698240A}lakshmidbserver.database.windows.net.AdventureWorksDW2019.lakshmi;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAX5JUfcMvz06tPYZCMj1GygAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACaGqy3wNJII+SOZsWtBfjxiYqyPLm5CdllROpDfOek4wAAAAAOgAAAAAIAACAAAACipKFi/QsxFymtEWcGPhMErrUHAsg/+tofBMIdQcdRgCAAAACHj9PHEg5zQXZeuD9nsydgJcOfidUHimpCoFA1JZk1KUAAAADYKocCvL+MKzdQ4LAkw3Tr3Fy/PyczasIzUegFQVHthCFRxp+oypRwBfRCXmAhwyJUkP8yOMjYxnh7c+DG6Ktp</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lakshmidbserver.database.windows.net.lakshmidb.lakshmi]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D27D6D77-4ECA-4D9E-8BC1-AF29592173D1}"
+      DTS:ObjectName="lakshmidbserver.database.windows.net.lakshmidb.lakshmi">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lakshmidbserver.database.windows.net;User ID=lakshmi;Initial Catalog=lakshmidb;Provider=SQLNCLI11.1;Application Name=SSIS-Package-{D27D6D77-4ECA-4D9E-8BC1-AF29592173D1}lakshmidbserver.database.windows.net.lakshmidb.lakshmi;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAX5JUfcMvz06tPYZCMj1GygAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABXhnBPI/WbkovK55Kb08W/jj+vXxRJLNLINIfze3RxHgAAAAAOgAAAAAIAACAAAAAgrd7VvXlJk1/uPvde4WwEdJtAy+VqpCK5mqqkT8V8BSAAAAC2oxK5hA2mz3/c0vCyQC73vEab+JoS5yrC2isAFsxmG0AAAABU40o4rQsHIxwhIW7RgcmoNWMkfrAKZ9SUf5PZ5lxvThET35wsPP+CzAfQQ1eoCXPeK4YqH4CbJLmr9rLU2qIm</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="LAKSHMI.tempdb"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{FB347709-B819-4D44-808A-EF1B549DB39B}"
+      DTS:ObjectName="Injury_data-file-processor">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+    <DTS:LogProvider
+      DTS:ConfigString="LAKSHMI.tempdb"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{611F6DA9-25A5-4686-8A56-EFA1194E44CC}"
+      DTS:ObjectName="Log loop">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A2DC0675-F185-443B-9FEB-91C26EF52770}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="firstfile">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1E1EC4E3-5B2D-4CA9-A245-EF9D020766D8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="secondfile">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,10,OnProgress</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnProgress"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{FB347709-B819-4D44-808A-EF1B549DB39B}" />
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{611F6DA9-25A5-4686-8A56-EFA1194E44CC}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\covid_patientdata Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{9B73D13C-EABC-45ED-9908-A6951F19C5B5}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="covid_patientdata Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{A5BDBC86-7399-4CA4-91DF-C7E278FFF5DE}"
+        DTS:ObjectName="{A5BDBC86-7399-4CA4-91DF-C7E278FFF5DE}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\laksh\OneDrive\Desktop\destinationfile\covid_patients_data" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">1,13,OnPostExecute</DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnPostExecute"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:SelectedLogProviders>
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{FB347709-B819-4D44-808A-EF1B549DB39B}" />
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{611F6DA9-25A5-4686-8A56-EFA1194E44CC}" />
+        </DTS:SelectedLogProviders>
+      </DTS:LoggingOptions>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\covid_patientdata Loop Container\Data Flow Task 1"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{0C46AD81-5E7A-464F-B839-644947B5BF6A}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task 1"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1" />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager source]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager source]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Direction]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Direction]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Direction]"
+                          name="Direction"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Year]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Year]"
+                          name="Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Weekday]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weekday]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Weekday]"
+                          name="Weekday"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                          name="Country"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Commodity]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Commodity]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Commodity]"
+                          name="Commodity"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Transport_Mode]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Transport_Mode]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Transport_Mode]"
+                          name="Transport_Mode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Measure]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Measure]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Measure]"
+                          name="Measure"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          name="Value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Cumulative]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cumulative]"
+                          length="50"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Cumulative]"
+                          name="Cumulative"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Direction]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Direction" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weekday]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Weekday" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Commodity]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Commodity" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Transport_Mode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Transport_Mode" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Measure]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Measure" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cumulative]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Cumulative" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[covid_patient_data]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Direction]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Direction"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Direction]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Year"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Year]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Date"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Weekday]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Weekday"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Weekday]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Country]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Country"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Country]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Commodity]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Commodity"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Commodity]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Commodity]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Transport_Mode]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Transport_Mode"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Transport_Mode]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Transport_Mode]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Measure]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Measure"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Measure]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Measure]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Value]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Value"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Value]" />
+                        <inputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cumulative]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Cumulative"
+                          externalMetadataColumnId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative]"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Cumulative]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Direction]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Direction" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Weekday" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Commodity]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Commodity" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Transport_Mode]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Transport_Mode" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Measure]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Measure" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cumulative]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Cumulative" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\covid_patientdata Loop Container\Data Flow Task 1.Paths[Flat File Source Output]"
+                  endId="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{4E2FFCDA-7F76-414A-BE5C-A822EB9C5F5A}"
+          DTS:ObjectName="{4E2FFCDA-7F76-414A-BE5C-A822EB9C5F5A}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::firstfile" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_injurydata"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0E3F741C-45EC-48F9-BE68-20C01FDFAC6E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_injurydata"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_injurydata\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[injury_data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 20</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">50</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_injurydata\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lakshmidbserver.database.windows.net.lakshmidb.lakshmi]"
+                  connectionManagerRefId="Package.ConnectionManagers[lakshmidbserver.database.windows.net.lakshmidb.lakshmi]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Value]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Value"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Value]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="year" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="occupation" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[sex]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="sex" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Employment status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Employment status" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_injurydata\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_injurydata\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_injurydata\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_injurydata\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[covid_patient_data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_injurydata\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Direction]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Direction]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Direction]"
+                      name="Direction"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Weekday]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Weekday]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Weekday]"
+                      name="Weekday"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Commodity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Commodity]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Commodity]"
+                      name="Commodity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Transport_Mode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Transport_Mode]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Transport_Mode]"
+                      name="Transport_Mode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Measure]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Measure]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Measure]"
+                      name="Measure"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Value]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Value]"
+                      name="Value"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cumulative]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cumulative]"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cumulative]"
+                      name="Cumulative"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Direction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Direction" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Weekday]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Weekday" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Commodity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Commodity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Transport_Mode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Transport_Mode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Measure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Measure" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cumulative]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Cumulative" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Direction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Direction]"
+                      name="Direction" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Weekday]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Weekday]"
+                      name="Weekday" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Commodity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Commodity]"
+                      name="Commodity" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Transport_Mode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Transport_Mode]"
+                      name="Transport_Mode" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Measure]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Measure]"
+                      name="Measure" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Value]"
+                      name="Value" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cumulative]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cumulative]"
+                      name="Cumulative" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_injurydata.Paths[OLE DB Source Output]"
+              endId="Package\DFT_injurydata\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_injurydata\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_New_injurydata"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E2AD1965-512E-4C8A-AD98-FF82F07D3BE1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_New_injurydata"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_New_injurydata\New_Injurydata"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="New_Injurydata"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[new_injurydata]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select top 50 [Value],(year),(occupation),(sex),[Employment status] from [dbo].[injury_data]
+where sex ='female'</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_New_injurydata\New_Injurydata.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lakshmidbserver.database.windows.net.lakshmidb.lakshmi]"
+                  connectionManagerRefId="Package.ConnectionManagers[lakshmidbserver.database.windows.net.lakshmidb.lakshmi]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].Columns[Value]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Value"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Value]" />
+                    <inputColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].Columns[Employment status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Employment status"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Employment status]"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Employment status]" />
+                    <inputColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].Columns[Occupation]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Occupation"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Occupation]" />
+                    <inputColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].Columns[Sex]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sex"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sex]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Employment status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Employment status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Occupation" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sex" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_New_injurydata\New_Injurydata.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_New_injurydata\New_Injurydata.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\New_Injurydata.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_New_injurydata\New_Injurydata.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_New_injurydata\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT TOP (50) [Value], [Year], Occupation, Sex, [Employment status]
+FROM     injury_data
+WHERE  (Sex = 'female')</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_New_injurydata\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Value]"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Value]"
+                      name="Value"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Employment status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Employment status]"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Employment status]"
+                      name="Employment status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Occupation]"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Occupation]"
+                      name="Occupation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sex]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sex]"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sex]"
+                      name="Sex"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Value" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Employment status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Employment status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Occupation" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sex]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sex" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Value]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Value]"
+                      name="Value" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Occupation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Occupation]"
+                      name="Occupation" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sex]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sex]"
+                      name="Sex" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Employment status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Employment status]"
+                      name="Employment status" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_New_injurydata.Paths[OLE DB Source Output]"
+              endId="Package\DFT_New_injurydata\New_Injurydata.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_New_injurydata\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Injury-data-loop-container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{859AE022-1004-4625-974C-5680D430B35D}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Injury-data-loop-container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{C30A738D-F0BB-4345-8595-8F667FEE0CF9}"
+        DTS:ObjectName="{C30A738D-F0BB-4345-8595-8F667FEE0CF9}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\laksh\OneDrive\Desktop\destinationfile\injury_data" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1" />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Injury-data-loop-container\Data Flow Task 1"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{E4AB883A-01FC-4D49-89F4-9BAE788C74E5}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task 1"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1" />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source 1"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager -2]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager -2]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Year]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Year]"
+                          name="Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sex]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sex]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sex]"
+                          name="Sex"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Age group (years) at date of injury]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Age group (years) at date of injury]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Age group (years) at date of injury]"
+                          name="Age group (years) at date of injury"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Geographic region where injury occurred]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Geographic region where injury occurred]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Geographic region where injury occurred]"
+                          name="Geographic region where injury occurred"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Employment status]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Employment status]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Employment status]"
+                          name="Employment status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Occupation]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Occupation]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Occupation]"
+                          name="Occupation"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Type of injury illness disease]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Type of injury illness disease]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Type of injury illness disease]"
+                          name="Type of injury illness disease"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Industry]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Industry]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Industry]"
+                          name="Industry"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Industry subgroup]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Industry subgroup]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Industry subgroup]"
+                          name="Industry subgroup"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Value]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Value]"
+                          name="Value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Measure]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Measure]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Measure]"
+                          name="Measure"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Status]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                          length="50"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Status]"
+                          name="Status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sex]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Sex" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Age group (years) at date of injury]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Age group (years) at date of injury" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Geographic region where injury occurred]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Geographic region where injury occurred" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Employment status]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Employment status" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Occupation]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Occupation" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Type of injury illness disease]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Type of injury illness disease" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Industry]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Industry" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Industry subgroup]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Industry subgroup" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Measure]"
+                          codePage="1252"
+                          dataType="text"
+                          name="Measure" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Status" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Injury illness disease group]"
+                          codePage="1252"
+                          dataType="text"
+                          name="Injury illness disease group" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="injury_data"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[injury_data]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAKSHMI.tempdb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Year]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Year"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Year]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Sex]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Sex"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Sex]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Age group (years) at date of injury]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Age group (years) at date of injury"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Age group (years) at date of injury]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Age group (years) at date of injury]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Geographic region where injury occurred]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Geographic region where injury occurred"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Geographic region where injury occurred]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Geographic region where injury occurred]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Employment status]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Employment status"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Employment status]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Employment status]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Occupation]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Occupation"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Occupation]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Type of injury illness disease]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Type of injury illness disease"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Type of injury illness disease]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Type of injury illness disease]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Industry]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Industry"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Industry]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Industry subgroup]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Industry subgroup"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Industry subgroup]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Industry subgroup]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Value]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Value"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Value]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Measure]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="Measure"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Measure]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Measure]" />
+                        <inputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].Columns[Status]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Status"
+                          externalMetadataColumnId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output].Columns[Status]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Sex" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Age group (years) at date of injury]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Age group (years) at date of injury" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Geographic region where injury occurred]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Geographic region where injury occurred" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Employment status]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Employment status" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Occupation" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Type of injury illness disease]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Type of injury illness disease" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Industry" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Industry subgroup]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Industry subgroup" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Measure]"
+                          codePage="1252"
+                          dataType="text"
+                          name="Measure" />
+                        <externalMetadataColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Status" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Injury-data-loop-container\Data Flow Task 1.Paths[Flat File Source Output]"
+                  endId="Package\Injury-data-loop-container\Data Flow Task 1\injury_data.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{EC524469-096C-46EA-AEB6-B43C63E604E9}"
+          DTS:ObjectName="{EC524469-096C-46EA-AEB6-B43C63E604E9}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::secondfile" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CD6240EF-1F88-4F47-B5F1-22BBAB7DAB86}"
+      DTS:From="Package\Injury-data-loop-container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_injurydata" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{1F1B75FB-6655-467E-A44E-790130C0A84C}"
+      DTS:From="Package\covid_patientdata Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT_New_injurydata" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\covid_patientdata Loop Container\Data Flow Task 1"
+          TopLeft="13.4999865889555,8.60000088850657" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="214.4,105.6"
+          Size="214.4,148.8"
+          Id="Package\covid_patientdata Loop Container"
+          TopLeft="33.3333320087857,0.866666673554363" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT_injurydata"
+          TopLeft="343.333319690493,188.933334834841" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\DFT_New_injurydata"
+          TopLeft="104.999995827675,184.600001467069" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Injury-data-loop-container\Data Flow Task 1"
+          TopLeft="17.4999834100412,0.200001673698466" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="204.8,96.8"
+          Size="204.8,140"
+          Id="Package\Injury-data-loop-container"
+          TopLeft="319.999987284343,2.600000020663" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="420.266653487418,142.600000020663">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.3333348141776"
+              Start="0,0"
+              End="0,38.8333348141776">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.8333348141776" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="140.533332008786,149.666666673554">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.4666638188893,34.9333347935146"
+              Start="0,0"
+              End="52.4666638188893,27.4333347935146">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.4666673967573" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.4666673967573"
+                    Point2="0,17.4666673967573"
+                    Point3="4,17.4666673967573" />
+                  <mssgle:LineSegment
+                    End="48.4666638188893,17.4666673967573" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.4666638188893,17.4666673967573"
+                    Point2="52.4666638188893,17.4666673967573"
+                    Point3="52.4666638188893,21.4666673967573" />
+                  <mssgle:LineSegment
+                    End="52.4666638188893,27.4333347935146" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\covid_patientdata Loop Container\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination"
+          TopLeft="259,152" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\covid_patientdata Loop Container\Data Flow Task 1\Flat File Source"
+          TopLeft="140,16" />
+        <EdgeLayout
+          Id="Package\covid_patientdata Loop Container\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="215.6,57.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="129,94.4"
+              Start="0,0"
+              End="129,86.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.2"
+                    Point2="0,47.2"
+                    Point3="4,47.2" />
+                  <mssgle:LineSegment
+                    End="125,47.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="125,47.2"
+                    Point2="129,47.2"
+                    Point3="129,51.2" />
+                  <mssgle:LineSegment
+                    End="129,86.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\covid_patientdata Loop Container\Data Flow Task 1\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_injurydata">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\DFT_injurydata\OLE DB Source"
+          TopLeft="203,53" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\DFT_injurydata\OLE DB Destination 1"
+          TopLeft="240,182" />
+        <EdgeLayout
+          Id="Package\DFT_injurydata.Paths[OLE DB Source Output]"
+          TopLeft="279,94.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,87.3999999999999"
+              Start="0,0"
+              End="51,79.8999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.7"
+                    Point2="0,43.7"
+                    Point3="4,43.7" />
+                  <mssgle:LineSegment
+                    End="47,43.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47,43.7"
+                    Point2="51,43.7"
+                    Point3="51,47.7" />
+                  <mssgle:LineSegment
+                    End="51,79.8999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_injurydata\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_injurydata\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_New_injurydata">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\DFT_New_injurydata\New_Injurydata"
+          TopLeft="213,171" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\DFT_New_injurydata\OLE DB Source"
+          TopLeft="143,21" />
+        <EdgeLayout
+          Id="Package\DFT_New_injurydata.Paths[OLE DB Source Output]"
+          TopLeft="219,62.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.2,108.4"
+              Start="0,0"
+              End="69.2,100.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.2"
+                    Point2="0,54.2"
+                    Point3="4,54.2" />
+                  <mssgle:LineSegment
+                    End="65.2,54.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.2,54.2"
+                    Point2="69.2,54.2"
+                    Point3="69.2,58.2" />
+                  <mssgle:LineSegment
+                    End="69.2,100.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_New_injurydata\New_Injurydata">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_New_injurydata\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Injury-data-loop-container\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Injury-data-loop-container\Data Flow Task 1\injury_data"
+          TopLeft="286,172" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Injury-data-loop-container\Data Flow Task 1\Flat File Source 1"
+          TopLeft="147,26" />
+        <EdgeLayout
+          Id="Package\Injury-data-loop-container\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="227,67.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.8,104.4"
+              Start="0,0"
+              End="123.8,96.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.2"
+                    Point2="0,52.2"
+                    Point3="4,52.2" />
+                  <mssgle:LineSegment
+                    End="119.8,52.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.8,52.2"
+                    Point2="123.8,52.2"
+                    Point3="123.8,56.2" />
+                  <mssgle:LineSegment
+                    End="123.8,96.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Injury-data-loop-container\Data Flow Task 1\injury_data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
